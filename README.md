@@ -31,3 +31,17 @@
     ├── submission_xgboost_02_with_weight.csv    -->  由交叉驗證模型聯合預測    
     └── submission_xgboost_03_with_weight.csv    -->  由所有資料聯合32個GBDT預測   
 ```
+
+## 環境安裝
+```
+conda create --name py37 python=3.7
+conda activate py37
+
+pip install umap-learn
+pip install bhtsne
+pip install xgboost
+pip install scikit-learn
+pip install numpy
+pip install pandas
+pip install scipy
+```
