@@ -16,20 +16,21 @@
 ├── code_analysis
 │   ├── GBDT.ipynb             -->  無權重正常訓練版本，有結合32個GBDT    
 │   └── GBDT_weighted.ipynb    -->  有權重的訓練版本，結合了32個GBDT        
-├── input
-│   ├── train.csv              -->  訓練資料    
-│   ├── test.csv               -->  測試資料    
-│   ├── train_x_pca_umap.csv   -->  月份換數值 / 缺失值填入眾數 / 類別one-hot / 數值常態化 / PCA / UMAP
-│   ├── train_y_pca_umap.csv   -->  ..  
-│   └── test_x_pca_umap.csv    -->  ..
+└── input
+    ├── train.csv              -->  訓練資料    
+    ├── test.csv               -->  測試資料    
+    ├── train_x_pca_umap.csv   -->  月份換數值 / 缺失值填入眾數 / 類別one-hot / 數值常態化 / PCA / UMAP
+    ├── train_y_pca_umap.csv   -->  ..  
+    └── test_x_pca_umap.csv    -->  ..
+
+.
 └── submission
-    ├── ensemble_with_umap32.csv                 -->  集成32個預測結果原始資料    
-    ├── submission_xgboost_02_with_umap.csv      -->  由交叉驗證模型聯合預測
-    ├── submission_xgboost_03_with_umap.csv      -->  由所有資料聯合2個GBDT預測    
-    ├── submission_xgboost_03_with_umap32.csv    -->  由所有資料聯合32個GBDT預測     
-    ├── ensemble_with_weight.csv                 -->  集成32個預測結果原始資料        
-    ├── submission_xgboost_02_with_weight.csv    -->  由交叉驗證模型聯合預測    
-    └── submission_xgboost_03_with_weight.csv    -->  由所有資料聯合32個GBDT預測   
+    ├── submission_xgboost_03_with_umap32.csv   --> (0.73210)(2.) one-hot / pt / pca / umap
+    ├── submission_xgboost_03_with_weight.csv   --> (0.72762)(5)  one-hot / pt / pca / umap / weight
+    ├── submission_xgboost_03_with_tsne.csv     --> (0.73116)(3)  one-hot / pt / pca / umap / tsne
+    ├── submission_xgboost_03_with_weight2.cs   --> (0.72935)(4)  one-hot / pt / pca / umap / tsne / weight
+    ├── submission_xgboost_03_without_pt.csv    --> (0.72715)(6)  one-hot / pca / umap / tsne  
+    └── submission_xgboost_03_without_tsne.cs   --> (0.73257)(1.) one-hot / pca / umap
 ```
 
 ## 環境安裝
