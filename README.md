@@ -1,5 +1,7 @@
 # ServiceUsageForecast-Intro2FinTech-HW1
 
+![](https://i.imgur.com/342KLgp.png)
+
 ## 專案目錄說明
 ```
 .    
