@@ -21,16 +21,26 @@
     ├── test.csv               -->  測試資料    
     ├── train_x_pca_umap.csv   -->  月份換數值 / 缺失值填入眾數 / 類別one-hot / 數值常態化 / PCA / UMAP
     ├── train_y_pca_umap.csv   -->  ..  
-    └── test_x_pca_umap.csv    -->  ..
+    ├── test_x_pca_umap.csv    -->  ..
+    ├── train_x_v2.csv         -->  前面的版本都不小心把ID放進去了，這裡開始把它拿掉
+    ├── train_y_v2.csv         -->  ..
+    └── test_x_v2.csv          -->  ..
 
 .
 └── submission
-    ├── submission_xgboost_03_with_umap32.csv   --> (0.73210)(2.) one-hot / pt / pca / umap
-    ├── submission_xgboost_03_with_weight.csv   --> (0.72762)(5)  one-hot / pt / pca / umap / weight
-    ├── submission_xgboost_03_with_tsne.csv     --> (0.73116)(3)  one-hot / pt / pca / umap / tsne
-    ├── submission_xgboost_03_with_weight2.cs   --> (0.72935)(4)  one-hot / pt / pca / umap / tsne / weight
-    ├── submission_xgboost_03_without_pt.csv    --> (0.72715)(6)  one-hot / pca / umap / tsne  
-    └── submission_xgboost_03_without_tsne.cs   --> (0.73257)(1.) one-hot / pca / umap
+    ├── submission_autokeras_01.csv                 -->   玩玩看autokeras
+    ├── submission_xgboost_03_v2_M2A1.csv           -->   權重 *2+1
+    ├── submission_xgboost_03_v2_weighted.csv       -->   權重 *8+1
+    ├── submission_xgboost_03_v2_without_tsne.csv   -->   one-hot / pt / pca / umap
+    ├── submission_xgboost_03_v2.csv                -->   one-hot / pt / pca / umap / tsne；剛剛前面的版本都不小心把ID放進去訓練了，這裡開始把它拿掉
+    ├── submission_xgboost_03_uvt.csv               -->   Update Validation and Test process
+    ├── submission_xgboost_03_without_tsne.csv      -->   one-hot / pca / umap
+    ├── submission_xgboost_03_without_pt.csv        -->   one-hot / pca / umap / tsne  
+    ├── submission_xgboost_03_with_weight2.csv      -->   one-hot / pt / pca / umap / tsne / weight
+    ├── submission_xgboost_03_with_tsne.csv         -->   one-hot / pt / pca / umap / tsne
+    ├── submission_xgboost_03_with_weight.csv       -->   one-hot / pt / pca / umap / weight
+    ├── submission_xgboost_03_with_umap32.csv       -->   one-hot / pt / pca / umap，集成32個模型
+    └── submission_xgboost_03_with_umap.csv         -->   one-hot / pt / pca / umap，僅單一個模型
 ```
 
 ## 環境安裝
